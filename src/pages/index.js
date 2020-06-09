@@ -1,22 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const lastTime = null
+  return (
+    <Layout>
+      <SEO title="Wrong Artem" />
+      <h2>The last time wrong Artem was tagged in a work chat was</h2>
+      <h1>
+        {lastTime ? lastTime : "some time ago (we don't know exactly when)"}
+      </h1>
+      <p>In total, wrong Artem was tagged a lot of times.</p>
+    </Layout>
+  )
+}
 
 export default IndexPage
